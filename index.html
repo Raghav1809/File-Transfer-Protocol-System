@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum Caesar Cipher 3000</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-container">
+        <div class="cyber-card">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="cyber-circle"></div>
+                    <h1>QUANTUM CAESAR 3000</h1>
+                </div>
+                <p class="subtitle">Advanced Cryptographic System v3.0</p>
+                <div class="status-bar">
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        System Online
+                    </div>
+                    <div class="status-item">
+                        <span id="encryption-strength">256</span>-bit
+                    </div>
+                    <div class="status-item" id="current-time"></div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label>INPUT SEQUENCE</label>
+                    <textarea id="text" placeholder="Enter sequence for encryption/decryption..."></textarea>
+                    <div class="char-counter">Characters: <span id="charCount">0</span></div>
+                </div>
+
+                <div class="control-panel">
+                    <div class="input-group">
+                        <label>QUANTUM KEY</label>
+                        <input type="number" id="key" placeholder="Enter quantum shift value (1-25)">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>ENCRYPTION MODE</label>
+                        <select id="encryptionMode">
+                            <option value="standard">Standard Shift</option>
+                            <option value="reverse">Reverse Shift</option>
+                            <option value="double">Double Encryption</option>
+                            <option value="random">Quantum Random</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-panel">
+                <button class="cyber-btn encrypt-btn" onclick="processEncryption()">
+                    <span class="btn-icon">🔒</span> ENCRYPT
+                    <div class="btn-glitch"></div>
+                </button>
+                <button class="cyber-btn decrypt-btn" onclick="processDecryption()">
+                    <span class="btn-icon">🔓</span> DECRYPT
+                    <div class="btn-glitch"></div>
+                </button>
+                <button class="cyber-btn analyze-btn" onclick="analyzeText()">
+                    <span class="btn-icon">📊</span> ANALYZE
+                </button>
+            </div>
+
+            <div class="result-panel">
+                <h3>OUTPUT MATRIX</h3>
+                <div class="output-container">
+                    <p id="output">Awaiting input sequence...</p>
+                    <div class="action-buttons">
+                        <button class="cyber-btn-small" onclick="copyToClipboard()">
+                            <span class="btn-icon">📋</span>
+                        </button>
+                        <button class="cyber-btn-small" onclick="downloadResult()">
+                            <span class="btn-icon">💾</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="analysis-panel" id="analysisPanel"></div>
+            </div>
+
+            <div class="matrix-bg"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
